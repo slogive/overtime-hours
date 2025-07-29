@@ -2,6 +2,13 @@
 	"name": "overtime-hours",
 	"version": "1.0.0",
 	"private": true,
+	"description": "Track your overtime hours easily",
+	"author": "Cesar Fonseca",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/slogive/overtime-hours.git"
+	},
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
@@ -24,5 +31,9 @@
 		"prettier": "^3.6.2",
 		"prettier-plugin-jsdoc": "^1.3.3",
 		"typescript": "^5"
+	},
+	"homepage": "https://overtime.slogive.com/",
+	"engines": {
+		"bun": ">=1.2.19"
 	}
 }
