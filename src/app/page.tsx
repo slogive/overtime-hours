@@ -118,7 +118,15 @@ export default function Home() {
 	]
 
 	return (
-		<div style={{ maxWidth: 600, margin: '0 auto', padding: 24 }}>
+		<div
+			style={{
+				maxWidth: 600,
+				margin: '0 auto',
+				padding: 24,
+				fontFamily:
+					'"Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Arial", "sans-serif"',
+			}}
+		>
 			<Card title='Calculadora de Horas Extra'>
 				<Form
 					layout='vertical'
@@ -135,6 +143,7 @@ export default function Home() {
 							placeholder='Ej: 80.5'
 							controls={false}
 							style={{ width: '100%' }}
+							// @ts-ignore
 							parser={(value) => Number(String(value).replace(/[^\d.]/g, ''))}
 						/>
 					</Form.Item>
@@ -158,6 +167,7 @@ export default function Home() {
 									maximumFractionDigits: 0,
 								}).format(Number(value))
 							}
+							// @ts-ignore
 							parser={(value) => Number(String(value).replace(/[^\d]/g, ''))}
 						/>
 					</Form.Item>
@@ -336,6 +346,31 @@ export default function Home() {
 					</Card>
 				</>
 			)}
+			<footer
+				style={{
+					textAlign: 'center',
+					marginTop: 32,
+					color: '#888',
+					fontSize: 14,
+				}}
+			>
+				<a
+					href='https://slogive.com'
+					target='_blank'
+					rel='noopener noreferrer'
+					style={{
+						color: '#1677ff',
+						textDecoration: 'none',
+						display: 'inline-flex',
+						alignItems: 'center',
+						gap: 6,
+						marginTop: 8,
+					}}
+				>
+					Made with <HeartOutlined style={{ color: '#1677ff', fontSize: 18 }} />{' '}
+					by Cesar Fonseca
+				</a>
+			</footer>
 		</div>
 	)
 }
